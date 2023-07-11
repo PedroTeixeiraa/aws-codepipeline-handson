@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Instalando Dependências
+      - npm install
+  build:
+    commands:
+      - echo Iniciando Build em `date`
+      - npm run build
+  post_build:
+    commands:
+    - echo Build finalizado em `date`
+
+artifacts:
+  files:
+    - build/**/*
